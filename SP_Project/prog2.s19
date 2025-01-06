@@ -1,0 +1,57 @@
+!!Prog2!!
+startprogram 
+variable int_2 _AAAAAAAA,_BBBBBBBB,_CCCCCCCC;
+startblok
+get _AAAAAAAA;
+get _BBBBBBBB;
+get _CCCCCCCC;
+if(_AAAAAAAA gr _BBBBBBBB)
+startblok
+	if(_AAAAAAAA gr _CCCCCCCC)
+	startblok
+		goto Abigger;		
+	endblok
+	else
+	startblok
+		put _CCCCCCCC;
+		goto Outofif;
+		Abigger:		
+		put _AAAAAAAA;
+		goto Outofif;
+	endblok
+endblok	
+if(_BBBBBBBB less _CCCCCCCC)
+startblok
+	put _CCCCCCCC;
+endblok	
+else
+startblok
+	put _BBBBBBBB;
+endblok
+Outofif:	
+
+if((_AAAAAAAA eq _BBBBBBBB) and (_AAAAAAAA eq _CCCCCCCC) and (_BBBBBBBB eq _CCCCCCCC))
+startblok
+	put 1;
+endblok	
+else
+startblok
+	put 0;
+endblok
+if((_AAAAAAAA less 0) or (_BBBBBBBB less 0) or (_CCCCCCCC less 0))
+startblok
+	put -1;
+endblok	
+else
+startblok
+	put 0;
+endblok
+if(!(_AAAAAAAA less (_BBBBBBBB + _CCCCCCCC)))
+startblok
+	put(10);
+endblok	
+else
+startblok
+	put(0);
+endblok
+endblok

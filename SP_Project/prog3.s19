@@ -1,0 +1,45 @@
+!!Prog3!!
+startprogram 
+variable int_2 _AAAAAAAA,_AAAAAAA2,_BBBBBBBB,_XXXXXXXX,_CCCCCCC1,_CCCCCCC2;
+startblok
+get _AAAAAAAA;
+get _BBBBBBBB;
+for _AAAAAAA2==>_AAAAAAAA to _BBBBBBBB do
+	put _AAAAAAA2 * _AAAAAAA2;
+
+for _AAAAAAA2==>_BBBBBBBB to _AAAAAAAA do
+	put _AAAAAAA2 * _AAAAAAA2;
+
+_XXXXXXXX==>0;
+_CCCCCCC1==>0;
+while _CCCCCCC1 less _AAAAAAAA 
+startblok
+	_CCCCCCC2==>0;
+	while _CCCCCCC2 less _BBBBBBBB
+	startblok	
+		_XXXXXXXX==>_XXXXXXXX + 1;
+		_CCCCCCC2==>_CCCCCCC2 + 1;
+	endblok
+	end while
+_CCCCCCC1==>_CCCCCCC1 + 1;
+endblok	
+end while
+put _XXXXXXXX;
+
+_XXXXXXXX==>0;
+_CCCCCCC1==>1;
+repeat
+startblok
+  _CCCCCCC2==>1;
+  repeat
+  startblok
+    _XXXXXXXX==>_XXXXXXXX + 1;
+    _CCCCCCC2==>_CCCCCCC2 + 1;
+	endblok
+  until !(_CCCCCCC2 gr _BBBBBBBB)
+  _CCCCCCC1==>_CCCCCCC1 + 1;
+ endblok
+until !(_CCCCCCC1 gr _AAAAAAAA)
+put _XXXXXXXX;
+
+endblok
